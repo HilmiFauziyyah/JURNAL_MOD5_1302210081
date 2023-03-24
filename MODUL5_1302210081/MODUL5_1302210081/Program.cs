@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            SimpleDataBase<float> data = new SimpleDataBase<float>();
+            data.addNewData(13);
+            data.addNewData(02);
+            data.addNewData(21);
+            data.addNewData(81);
+            data.PrintAllData();
         }
     }
 }
