@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            penjumlahan penjumlahan = new penjumlahan();
+            penjumlahan.PenjumlahanTigaAngka<float>(13, 00, 81);
+            penjumlahan.Print();
         }
     }
 }
+
