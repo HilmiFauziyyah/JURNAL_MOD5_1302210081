@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace MODUL5_1302210081
 {
-    internal class SimpleDataBase
+    internal class SimpleDataBase<T>
     {
         List <T> storedData { get; set; }
-        List<DataTime> inputdates { get; set; }
+        List<DateTime> inputdates { get; set; }
         public SimpleDataBase()
         {
-            storageData = new List<Task>();
-            inputdates = new list<DataTime>();
+            storedData = new List<T>();
+            inputdates = new List<DateTime>();
         }
-        public void addNewData(Task data)
+        public void addNewData(T data)
         {
-            storageData.add(data);
-            inputdates.add(DateTime.new);
+            storedData.Add(data);
+            inputdates.Add(DateTime.Now);
         }
-        public void PrintAll Data()
+        public void PrintAllData()
         {
-            for(int 1 = 0; int < storedData.Count; int++)
+            for(int i = 0; i < storedData.Count; i++)
             {
-                Console.WriteLine("Data ")
+                Console.WriteLine("Data "+(i+1) + " Berisi " + storedData.ElementAt(i)+ " yang disimpan pada waktu " + inputdates.ElementAt(i));
             }
         }
     }
